@@ -9,7 +9,8 @@ __pycache__/
 *$py.class
 
 # Build output
-build/compiled_prompt.txt
+build/*
+!build/.gitkeep
 
 # IDE files
 .idea/
