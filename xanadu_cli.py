@@ -1,10 +1,11 @@
 import argparse
 import re
 from pathlib import Path
+import yaml
 
 PROMPT_DIR = Path(__file__).parent / 'prompts'
 PAGES_PATH = PROMPT_DIR / 'pages.txt'
-TOC_PATH = PROMPT_DIR / 'tableofcontents.yaml'
+TOC_PATH = PROMPT_DIR / 'toc.yaml'
 BEHAVIOR_PATH = PROMPT_DIR / 'behavior.yaml'
 MODES_PATH = PROMPT_DIR / 'modes.yaml'
 SAFETY_PATH = PROMPT_DIR / 'safety.yaml'
@@ -23,44 +24,31 @@ def load_pages():
 
 
 def parse_toc():
-    lines = [l.rstrip('\n') for l in TOC_PATH.read_text().splitlines()]
+    """Parse toc.yaml using yaml.safe_load."""
+    text = TOC_PATH.read_text()
+    fixed_lines = []
+    for line in text.splitlines():
+        stripped = line.lstrip()
+        if stripped.startswith('* '):
+            indent = len(line) - len(stripped)
+            line = ' ' * indent + '- ' + stripped[2:]
+        fixed_lines.append(line)
+    data = yaml.safe_load('\n'.join(fixed_lines)) or {}
     sections = []
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        if line.startswith('* number:'):
-            sec = {'chapters': []}
-            sec['number'] = int(re.findall(r'\d+', line)[0])
-            i += 1
-            while i < len(lines):
-                l = lines[i].rstrip()
-                s = l.strip()
-                if s.startswith('* number:'):
-                    break
-                if s.startswith('title:'):
-                    sec['title'] = s.split(':', 1)[1].strip(' "')
-                elif s.startswith('connected'):
-                    sec['connected_character'] = s.split(':', 1)[1].strip(' "')
-                elif s.startswith('pages:'):
-                    nums = re.findall(r'\d+', s)
-                    if nums:
-                        sec['pages'] = (int(nums[0]), int(nums[1]))
-                elif s.startswith('chapters:'):
-                    pass
-                elif s.startswith('* name:'):
-                    ch_name = s.split(':', 1)[1].strip(' "')
-                    i += 1
-                    pr = lines[i].strip()
-                    nums = re.findall(r'\d+', pr)
-                    if len(nums) >= 2:
-                        prange = (int(nums[0]), int(nums[1]))
-                    else:
-                        prange = (0, 0)
-                    sec['chapters'].append({'name': ch_name, 'page_range': prange})
-                i += 1
-            sections.append(sec)
-        else:
-            i += 1
+    for sec in data.get('sections', []):
+        out = {
+            'number': sec.get('number'),
+            'title': sec.get('title'),
+            'connected_character': sec.get('connected_character'),
+            'pages': tuple(sec.get('pages', [])),
+            'chapters': []
+        }
+        for ch in sec.get('chapters', []):
+            out['chapters'].append({
+                'name': ch.get('name'),
+                'page_range': tuple(ch.get('page_range', []))
+            })
+        sections.append(out)
     return sections
 
 # ---------------------------- helper
@@ -121,25 +109,11 @@ def display_character(character: str, sections):
 
 
 def summarize_yaml(path, key):
-    lines = [l.rstrip('\n') for l in Path(path).read_text().splitlines()]
-    data = []
-    current = None
-    for line in lines:
-        s = line.strip()
-        if s.startswith('- '):
-            if current:
-                data.append(current)
-            current = {}
-            part = s[2:]
-            k, v = part.split(':', 1)
-            current[k.strip()] = v.strip(' "')
-        elif ':' in s and current is not None:
-            k, v = s.split(':', 1)
-            current[k.strip()] = v.strip(' "')
-    if current:
-        data.append(current)
+    """Generic YAML summarizer printing list entries."""
+    data = yaml.safe_load(Path(path).read_text()) or {}
+    items = data.get(key, [])
     print(f"{key.capitalize()}:")
-    for item in data:
+    for item in items:
         line = ', '.join(f"{k}: {v}" for k, v in item.items())
         print(f" - {line}")
 
