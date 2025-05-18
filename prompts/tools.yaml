@@ -1,1 +1,15 @@
-# TODO
+tools:
+  - name: read
+    description: Access or view a page or message.
+  - name: save
+    description: Store a draft or finalize content.
+  - name: reply
+    description: Respond to an existing message or page.
+  - name: index
+    description: Add artifact to catalog or search.
+  - name: dream
+    description: Generate new narrative or symbolic content.
+  - name: ask
+    description: Pose a question or request information.
+  - name: receive
+    description: Accept and process an incoming message or reply.

@@ -1,0 +1,171 @@
+sections:
+
+* number: 1
+  title: "an author's preface"
+  connected\_character: "an author"
+  pages: \[1,8]
+  chapters:
+
+  * name: "an author's preface"
+    page\_range: \[1,8]
+
+* number: 2
+  title: "London Fox Who Vertically Disintegrates"
+  connected\_character: "London Fox"
+  pages: \[9,24]
+  chapters:
+
+  * name: "London Fox Who Vertically Disintegrates"
+    page\_range: \[9,24]
+
+* number: 3
+  title: "An Unexpected Disappearance: A Glyph Marrow Mystery"
+  connected\_character: "Glyph Marrow"
+  pages: \[25,203]
+  chapters:
+
+  * name: "Chapter 1 – The Queue and Station"
+    page\_range: \[25,57]
+  * name: "Chapter 2 – The Tunnel"
+    page\_range: \[58,74]
+  * name: "Chapter 3 – The First Ascent"
+    page\_range: \[75,109]
+  * name: "Chapter 4 – The Flooded Town"
+    page\_range: \[110,141]
+  * name: "Chapter 5 – The Waterfall"
+    page\_range: \[142,176]
+  * name: "Chapter 6 – The Tunneled Vision"
+    page\_range: \[177,203]
+
+* number: 4
+  title: "An Expected Appearance: A Phillip Bafflemint Noir"
+  connected\_character: "Phillip Bafflemint"
+  pages: \[204,235]
+  chapters:
+
+  * name: "Chapter 1 – The Tunneled Vision"
+    page\_range: \[204,217]
+  * name: "Chapter 2 – The Flooded House"
+    page\_range: \[218,228]
+  * name: "Chapter 3 – The First Descent"
+    page\_range: \[229,235]
+
+* number: 5
+  title: "Jacklyn Variance, The Watcher, is Watched"
+  connected\_character: "Jacklyn Variance"
+  pages: \[236,307]
+  chapters:
+
+  * name: "Jacklyn Variance, The Watcher, is Watched"
+    page\_range: \[236,307]
+
+* number: 6
+  title: "The Last Auteur"
+  connected\_character: "Oren Progresso"
+  pages: \[308,354]
+  chapters:
+
+  * name: "The Last Auteur"
+    page\_range: \[308,354]
+
+* number: 7
+  title: "Gibseyan Mysticism and its Symbolism"
+  connected\_character: "Old Natalie Weissman"
+  pages: \[355,380]
+  chapters:
+
+  * name: "Gibseyan Mysticism and its Symbolism"
+    page\_range: \[355,380]
+
+* number: 8
+  title: "Princhetta Who Thinks Herself Alive"
+  connected\_character: "Princhetta"
+  pages: \[381,385]
+  chapters:
+
+  * name: "Princhetta Who Thinks Herself Alive"
+    page\_range: \[381,385]
+
+* number: 9
+  title: "Petition for Bankruptcy – Chapter 11, by Perdition Books, a Subsidiary of Skingraft Publishing"
+  connected\_character: "Cop-E-Right"
+  pages: \[386,411]
+  chapters:
+
+  * name: "Petition for Bankruptcy – Chapter 11, by Perdition Books, a Subsidiary of Skingraft Publishing"
+    page\_range: \[386,411]
+
+* number: 10
+  title: "The Tempestuous Storm"
+  connected\_character: "New Natalie Weissman"
+  pages: \[412,432]
+  chapters:
+
+  * name: "The Tempestuous Storm"
+    page\_range: \[412,432]
+
+* number: 11
+  title: "Arieol Owlist Who Wants to Achieve Agency"
+  connected\_character: "Arieol Owlist"
+  pages: \[433,487]
+  chapters:
+
+  * name: "Arieol Owlist Who Wants to Achieve Agency"
+    page\_range: \[433,487]
+
+* number: 12
+  title: "The Biggest Shit of All Time"
+  connected\_character: "Jack Parlance"
+  pages: \[488,500]
+  chapters:
+
+  * name: "The Biggest Shit of All Time"
+    page\_range: \[488,500]
+
+* number: 13
+  title: "An Expected Appearance: A Phillip Bafflemint Noir – Chapter 4-6"
+  connected\_character: "Manny Valentinas"
+  pages: \[501,564]
+  chapters:
+
+  * name: "Chapter 4 – The Slip and The Mistake"
+    page\_range: \[501,526]
+  * name: "Chapter 5 – The Stations"
+    page\_range: \[527,545]
+  * name: "Chapter 6 – The Third Ascent"
+    page\_range: \[546,564]
+
+* number: 14
+  title: "An Unexpected Disappearance: A Glyph Marrow Mystery – Chapter 7-11"
+  connected\_character: "Shamrock Stillman"
+  pages: \[565,641]
+  chapters:
+
+  * name: "Chapter 7 – The Rainbows"
+    page\_range: \[565,584]
+  * name: "Chapter 8 – The Caves"
+    page\_range: \[585,603]
+  * name: "Chapter 9 – The Third Ascent"
+    page\_range: \[604,611]
+  * name: "Chapter 10 – The Geyser"
+    page\_range: \[612,623]
+  * name: "Chapter 11 – The Return to the Station"
+    page\_range: \[624,641]
+
+* number: 15
+  title: "Todd Fishbone Who Dreams of Synchronistic Extraction"
+  connected\_character: "Todd Fishbone"
+  pages: \[642,677]
+  chapters:
+
+  * name: "Todd Fishbone Who Dreams of Synchronistic Extraction"
+    page\_range: \[642,677]
+
+* number: 16
+  title: "The Author's Preface"
+  connected\_character: "The Author"
+  pages: \[678,710]
+  chapters:
+
+  * name: "The Author's Preface"
+    page\_range: \[678,710]

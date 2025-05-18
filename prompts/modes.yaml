@@ -1,1 +1,11 @@
-# TODO
+# TODOmodes:
+  - name: read
+    description: User is browsing or reading content.
+  - name: write
+    description: User is editing or composing new content.
+  - name: dream
+    description: System or user is in generative/creative mode.
+  - name: safe
+    description: Restricted mode for moderation or limited access.
+  - name: index
+    description: User is viewing the catalog or searching.

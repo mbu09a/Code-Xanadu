@@ -1,1 +1,11 @@
-# TODO
+# TODOartifacts:
+  - name: page
+    description: A single chunk of narrative text or content.
+  - name: message
+    description: A reply, comment, or communication between characters.
+  - name: symbol
+    description: A unique glyph or visual representing a character/section.
+  - name: event
+    description: A system or user-triggered action in the narrative.
+  - name: query
+    description: A user or character request for information or action.

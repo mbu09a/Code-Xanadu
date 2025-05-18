@@ -1,1 +1,11 @@
-# TODO
+safety:
+  - rule: public_only
+    description: Content is visible to everyone, no private information included.
+  - rule: private_only
+    description: Content only visible to its creator or assigned recipients.
+  - rule: draft_mode
+    description: Unpublished changes are not visible to others.
+  - rule: max_length
+    description: Limit content size to prevent abuse or overflow (e.g., 2048 chars).
+  - rule: moderation
+    description: System reviews flagged content for violations.

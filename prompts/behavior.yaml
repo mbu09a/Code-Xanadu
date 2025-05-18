@@ -1,1 +1,20 @@
-# TODO
+behaviors:
+  - verb: read
+    description: View or access a page or message.
+    typical_contexts: [page, message]
+
+  - verb: reply
+    description: Respond to a page or message, creating a new message.
+    typical_contexts: [message]
+
+  - verb: index
+    description: Catalog or bookmark an artifact for later retrieval.
+    typical_contexts: [page, query]
+
+  - verb: save
+    description: Commit a draft or message to permanent storage.
+    typical_contexts: [page, message, event]
+
+  - verb: dream
+    description: Generate new content based on system or user prompt.
+    typical_contexts: [event, generation]
