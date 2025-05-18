@@ -1,7 +1,7 @@
-# Python virtual environment
-.venv
-venv
-env
+# Python virtual environments
+.venv/
+venv/
+env/
 
 # Python bytecode
 __pycache__/
@@ -9,15 +9,32 @@ __pycache__/
 *$py.class
 
 # Build output
-build/*
+dist/
+build/
 !build/.gitkeep
+*.egg-info/
 
-# IDE files
+# Logs and reports
+*.log
+logs/
+.coverage
+coverage.xml
+*.cover
+*.lcov
+htmlcov/
+nosetests.xml
+
+# Caches
+.mypy_cache/
+.pytest_cache/
+
+# IDE / Editor directories
 .idea/
 .vscode/
 
 # Environment variables
 .env
 
-# OS files
+# OS generated files
 .DS_Store
+Thumbs.db
