@@ -1,4 +1,4 @@
-# TODOmodes:
+modes:
   - name: read
     description: User is browsing or reading content.
   - name: write

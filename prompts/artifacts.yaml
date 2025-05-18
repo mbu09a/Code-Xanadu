@@ -1,4 +1,4 @@
-# TODOartifacts:
+artifacts:
   - name: page
     description: A single chunk of narrative text or content.
   - name: message
